@@ -1,38 +1,360 @@
-.App {
-  text-align: center;
+
+@import url("https://fonts.googleapis.com/css2?family=Clash+Display:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: Arial, sans-serif;
+  max-width: 250px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  padding: 10px 100px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  width: 1090px;
+}
+
+header nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 1rem;
+  background-color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.logo img {
+  margin-right: 0.5rem;
+}
+
+.logo h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: system-ui;
+  color: #000;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin-left: -340px; 
+}
+
+nav ul li {
+  margin-right: 1rem;
+  font-family: ui-monospace;
+  font-weight: 700;
+  font-size: larger;
+  cursor: pointer;
+}
+nav ul li:hover {
+  color: #e53935;
+}
+nav ul li:first-child {
+  color: red;
+}
+
+.download-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  width: 180px;
+  height: 50px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  color: #fff;
+  background-color: #e53935;
+}
+main {
+  width: 1150px;
+  margin-top: 100px;
+}
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+  padding: 2rem;
+  margin-top: 150px;
+  background-color: #fff;
+  position: relative; 
+}
+.hero-content {
+  margin-right: 250px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  width: 618px;
+  height: 128px;
+  font-weight: 800;
+  font-size: 51px;
+  line-height: 64px;
+  margin-bottom: 1rem;
+  color: #000;
+}
+.hero-content p {
+  width: 470px;
+}
+.hero-buttons {
+  display: flex; 
+  align-items: center; 
+  margin-top: 1rem;
+}
+
+.get-started-btn {
+  background-color: #000;
+  cursor: pointer;
+  padding-bottom: 10px;
+  color: #fff;
+  width: 180px;
+  height: 45px;
+  margin: 10px;
+  margin-left: -1px;
+}
+
+.hero-buttons img {
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 1rem;
+  border: none;
+}
+
+.phone-mockup {
+  position: absolute;
+  left: 430px;
+  top: -150px;
+  display: flex;
+  background-image: url("./image/background_round1.png");
+  width: 500px; 
+  background-position: right;
+  background-repeat: repeat;
+}
+
+.phone-mockup img {
+  position: absolute;
+  z-index: 1; 
+  margin-left: -10px; 
+}
+
+.phone-mockup img:nth-child(3) {
+  margin-left: 100px; 
+}
+
+.phone-mockup img:nth-child(2) {
+  margin-left: 250px;
+  top: 30px;
+}
+
+.phone-mockup img:nth-child(1) {
+  margin-left: 370px; 
+  top: 70px;
+}
+.phone-mockup img:nth-child(4) {
+  margin-left: 300px;
+  top: 80px;
+  z-index: 0;
+}
+.phone-mockup img:nth-child(5) {
+  margin-left: 350px;
+  top: 80px;
+  z-index: 0;
+}
+.phone-mockup img:nth-child(6) {
+  margin-left: 400px;
+  top: 80px;
+  z-index: 0;
+}
+.phone-mockup img:nth-child(7) {
+  margin-left: 250px;
+  top: 430px;
+  z-index: 0;
+}
+.images {
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  transform: translateX(-20%);
+}
+
+@media only screen and (max-width: 480px) {
+    .hero-content {
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+      .hero-buttons {
+        justify-content: start;
+      }
+      .phone-mockup img{
+        width: 250px;
+        margin-top: 100px;
+      }
+      .phone-mockup img:nth-child(3) {
+        margin-left: 100px; 
+      }
+      
+      .phone-mockup img:nth-child(2) {
+        margin-left: 200px; 
+        top: 50px;
+      }
+      
+      .phone-mockup img:nth-child(1) {
+        margin-left: 280px; 
+        top: 90px;
+      }
+      .phone-mockup img:nth-child(4) {
+        margin-left: 260px;
+        top: 90px;
+        z-index: 0;
+      }
+      .phone-mockup img:nth-child(5) {
+        margin-left: 230px;
+        top: 70px;
+        z-index: 0;
+      }
+      .phone-mockup img:nth-child(6) {
+        margin-left: 200px;
+        top: 50px;
+        z-index: 0;
+      }
+      .phone-mockup img:nth-child(7) {
+        margin-left: 220px;
+        top: 230px;
+        z-index: 0;
+      }
+      .download-btn{
+        left: -100px;
+      }
+      header{
+        width: 950px;
+      }
+      nav ul li:first-child {
+        display: none;
+      }
   }
-  to {
-    transform: rotate(360deg);
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .hero-content {
+        flex-direction: row;
+      }
   }
+
+@media screen and (min-width: 769px) and (max-width: 968px) {
+    .hero-content {
+        flex-direction: row;
+      }
+      .hero-buttons {
+        justify-content: space-between;
+      }
+      .phone-mockup {
+        display: block;
+      }
+  }
+
+.container2{
+    margin-top: 450px;
+    width: 1390px;
+height: auto;
+display: flex;
+    position: relative;
+    
+    justify-content: space-between;
+    
+}
+
+.left {
+    position: relative;
+    flex-basis: 50%;
+  }
+  
+  .left img {
+    position: absolute;
+    top: 7%;
+    z-index: 3; 
+    transform: translateX(10%);
+  }
+  
+  .left img:nth-child(2) {
+    top: 12%;
+    transform: translateY(20%);
+    z-index: 2;
+  }
+  
+  .left img:nth-child(3) {
+    top: 13%;
+    transform: translateY(10%);
+    z-index: 1;
+  }
+  
+  .left img:nth-child(4) {
+    top: 14%;
+    transform: translateY(5%);
+    z-index: 0;
+  }
+  .left img:last-child {
+    z-index: 1;
+    transform: translateY(-15%);
+}
+
+
+.features-container {
+  
+  flex-basis: 50%; 
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  margin-top: 140px;
+}
+
+.features-title {
+  color: red;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+
+.premium-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.feature-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.feature-title {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.feature-description {
+  color: #555;
+    font-family: emoji;
+    font-size: medium;
+    font-weight: 400;
 }
